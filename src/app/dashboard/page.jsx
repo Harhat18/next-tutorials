@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-
+import useSWR from "swr";
 const Dasboard = () => {
   // const [data, setData] = useState([]);
   // const [err, setErr] = useState(false);
@@ -23,6 +23,12 @@ const Dasboard = () => {
   //   getData();
   // }, []);
 
+  const fetcher = (...args) => fetch(...args).then((res) => res.json());
+  const { data, error, isLoading } = useSWR(
+    "https://jsonplaceholder.typicode.com/posts",
+    fetcher
+  );
+  console.log(data);
   return <div>Dasboard</div>;
 };
 

@@ -9,8 +9,9 @@
 
 .img {
   object-fit: cover;
-  filter: grayscale();
+  filter: grayscale(100%);
 }
+
 .imgText {
   position: absolute;
   bottom: 20px;
@@ -19,10 +20,12 @@
   padding: 5px;
   color: white;
 }
+
 .textContainer {
   display: flex;
   gap: 100px;
 }
+
 .item {
   flex: 1;
   margin-top: 50px;
@@ -30,8 +33,9 @@
   flex-direction: column;
   gap: 30px;
 }
+
 .desc {
-  font-style: 18px;
+  font-size: 18px;
   font-weight: 300;
   text-align: justify;
 }
